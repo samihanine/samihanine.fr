@@ -1,0 +1,330 @@
+$space: 3.5px;
+$primary: #ffedd3;
+$secondary: #fbf6ef;
+$hover: #2c2a25;
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* a {
+  text-decoration: none;
+  color: black;
+  transition: .2s ease-in-out !important;
+}
+
+body {
+  font-family: 'Arvo', serif;
+  margin: 0;
+  background-color: black;
+
+
+  width: calc(100vw - 7px) !important;
+  height: calc(100vh - 7px) !important;
+
+  display: grid;
+  grid-template-rows: 80px 1fr;
+
+  padding: $space / 2;
+  overflow: hidden;
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 1fr;
+
+    .left-container {
+      display: grid;
+      grid-template-rows: 1.5fr 3fr 80px;
+
+      .top-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .right-container {
+      display: flex;
+      flex-direction: column;
+
+
+      .top-container {
+        display: grid;
+        grid-template-columns: 20vw 1fr;
+        grid-template-rows: 20vw 1fr;
+      }
+
+      .down-container {
+        height: calc(100% - 20vw);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+  }
+
+}
+
+.block {
+  background-color: $primary;
+  margin: $space;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: .2s ease-in-out !important;
+
+  h2 {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  &:hover {
+    background-color: $hover;
+    transition: .4s ease-in-out !important;
+
+    color: $secondary;
+    svg {
+      color: $secondary !important;
+    }
+    
+  }
+}
+
+/* -------- */
+.header {
+  background: $primary;
+  align-items: flex-start;
+  ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+
+    li {
+      padding: 0 15px;
+      list-style: none;
+      font-size: 20px;
+      font-weight: 900;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: $hover;
+        color: $secondary;
+      }
+    }
+  }
+
+  &:hover {
+    background: $primary;
+    color: $hover;
+  }
+}
+.picture {
+  background-image: url("../image/photo.png");
+  background-size: cover;
+  background-color: $secondary;
+}
+
+.language {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  div, a {
+    background-color: $secondary;
+
+    svg {
+      font-size:5vw;
+      color: black !important;
+      padding: $space;
+      box-sizing: border-box;
+      align-self: center;
+    }
+  }
+
+
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  div, a {
+    background-color: $secondary;
+
+    svg {
+      font-size:4vw;
+      color: black !important;
+      padding: $space;
+      box-sizing: border-box;
+      align-self: center;
+    }
+  }
+}
+
+.project {
+  display: flex;
+
+
+  img {
+
+    width: calc(100% - 100px);
+    height: calc(100% - 100px); 
+    object-fit: contain;
+
+
+  }
+
+
+}
+
+.tuto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    height: calc(100% - 100px);
+  }
+
+}
+
+.cv {
+  background-image: url("../image/cv.png");
+  background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+
+
+  h2 {
+    color: black !important;
+  }
+}
+
+.propos {
+  padding: 20px;
+  text-align: center;
+
+  p {
+    font-size: 3vh;
+  }
+}
+
+.title {
+  display: grid;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  grid-template-columns: 1fr 8fr 1fr;
+
+  h3 {
+    text-align: center;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $secondary;
+
+    svg {
+      font-size: 35px;
+      font-weight: 900;
+      
+    }
+
+    &:hover {
+      background-color: $hover;
+    }
+
+
+  }
+
+
+}
+
+
+@media (max-width: 800px) {
+
+  body .body, .main, .left-container, .top-container, .down-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .right-container {
+    flex-direction: column-reverse !important;
+  }
+
+  * {
+    font-size: 15px !important;
+  }
+
+  body {
+    overflow: scroll;
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    svg {
+      font-size: 50px !important;
+    }
+
+
+  }
+
+  .block {
+    height: max-content !important;
+    min-height: 100px;
+  }
+
+  .header {
+    margin-bottom: 5px !important;
+    padding: 0;
+    ul {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      li {
+        font-size: 14px !important;
+        text-align: center;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .tuto {
+    padding: 20px;
+    img {
+      width: 60vw;
+      height: 60vw;
+    }
+    
+  }
+
+  .picture {
+    height: calc(100vw - 20px) !important;
+  }
+
+  .project {
+    img{
+      width: 80vw;
+      height: 80vw;
+    } 
+  }
+
+  .cv {
+    height: 180px !important;
+  }
+}
+
