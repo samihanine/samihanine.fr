@@ -69,7 +69,7 @@ body .main .right-container .down-container {
 }
 
 .block {
-  background-color: #ffedd3;
+  background-color: #D5EDFF;
   margin: 3.5px;
   cursor: pointer;
   display: -webkit-box;
@@ -85,8 +85,8 @@ body .main .right-container .down-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: .4s ease-in-out !important;
-  transition: .4s ease-in-out !important;
+  -webkit-transition: .2s ease-in-out !important;
+  transition: .2s ease-in-out !important;
 }
 
 .block h2 {
@@ -98,16 +98,16 @@ body .main .right-container .down-container {
   background-color: #2c2a25;
   -webkit-transition: .4s ease-in-out !important;
   transition: .4s ease-in-out !important;
-  color: #fbf6ef;
+  color: #eef5fb;
 }
 
-.block:hover svg {
-  color: #fbf6ef !important;
+.block:hover > svg {
+  color: #eef5fb !important;
 }
 
 /* -------- */
 .header {
-  background: #ffedd3;
+  background: #D5EDFF;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -133,22 +133,34 @@ body .main .right-container .down-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .2s ease-in-out !important;
+  transition: .2s ease-in-out !important;
+}
+
+.header ul li svg {
+  font-size: 30px;
 }
 
 .header ul li:hover {
   background-color: #2c2a25;
-  color: #fbf6ef;
+  color: #eef5fb !important;
+  -webkit-transition: .2s ease-in-out !important;
+  transition: .2s ease-in-out !important;
+}
+
+.header ul li:hover a {
+  color: #eef5fb !important;
 }
 
 .header:hover {
-  background: #ffedd3;
+  background: #D5EDFF;
   color: #2c2a25;
 }
 
 .picture {
   background-image: url("../image/photo.png");
   background-size: cover;
-  background-color: #fbf6ef;
+  background-color: #eef5fb;
 }
 
 .language {
@@ -161,7 +173,7 @@ body .main .right-container .down-container {
 }
 
 .language div, .language a {
-  background-color: #fbf6ef;
+  background-color: #eef5fb;
 }
 
 .language div svg, .language a svg {
@@ -185,7 +197,7 @@ body .main .right-container .down-container {
 }
 
 .contact div, .contact a {
-  background-color: #fbf6ef;
+  background-color: #eef5fb;
 }
 
 .contact div svg, .contact a svg {
@@ -233,7 +245,7 @@ body .main .right-container .down-container {
 }
 
 .cv {
-  background-image: url(https://www.pngkey.com/png/full/153-1535653_resume-clipart.png);
+  background-image: url("../image/cv.png");
   background-size: cover;
 }
 
@@ -278,7 +290,7 @@ body .main .right-container .down-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #fbf6ef;
+  background-color: #eef5fb;
 }
 
 .title .btn svg {
@@ -288,6 +300,18 @@ body .main .right-container .down-container {
 
 .title .btn:hover {
   background-color: #2c2a25;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.863);
+  width: 100vw;
+  height: 100vh;
 }
 
 @media (max-width: 800px) {
@@ -351,6 +375,9 @@ body .main .right-container .down-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .header ul li svg {
+    font-size: 25px !important;
   }
   .tuto {
     padding: 20px;

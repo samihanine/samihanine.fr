@@ -1,6 +1,6 @@
 $space: 3.5px;
-$primary: #ffedd3;
-$secondary: #fbf6ef;
+$primary: #D5EDFF;
+$secondary: #eef5fb;
 $hover: #2c2a25;
 
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
@@ -8,7 +8,6 @@ $hover: #2c2a25;
 * a {
   text-decoration: none;
   color: black;
-  transition: .2s ease-in-out !important;
 }
 
 body {
@@ -86,7 +85,7 @@ body {
     transition: .4s ease-in-out !important;
 
     color: $secondary;
-    svg {
+    & > svg {
       color: $secondary !important;
     }
     
@@ -110,10 +109,20 @@ body {
       height: 100%;
       display: flex;
       align-items: center;
+      transition: .2s ease-in-out !important;
+
+      svg {
+        font-size: 30px;
+      }
 
       &:hover {
         background-color: $hover;
-        color: $secondary;
+        color: $secondary !important;
+        transition: .2s ease-in-out !important;
+
+        a {
+          color: $secondary !important;
+        }
       }
     }
   }
@@ -199,10 +208,6 @@ body {
   background-image: url("../image/cv.png");
   background-size: cover;
 
-    width: 100%;
-    height: 100%;
-
-
 
   h2 {
     color: black !important;
@@ -249,6 +254,17 @@ body {
   }
 
 
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  background-color: rgba(0, 0, 0, 0.863);
+  width: 100vw;
+  height: 100vh;
 }
 
 
@@ -300,6 +316,10 @@ body {
         padding: 0;
         display: flex;
         justify-content: center;
+
+        svg {
+          font-size: 25px !important;
+        }
       }
     }
   }

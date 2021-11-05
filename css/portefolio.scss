@@ -1,0 +1,36 @@
+$primary: #caeaf5;
+$secondary: #ffffff;
+$hover: #2c2a25;
+.portefolio {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    & > div {
+        padding-top: 20px;
+        width: 200px;
+        height: 230px;
+        box-sizing: border-box;
+        align-self: center;
+        justify-self: center;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border: solid 2px white;
+
+    }
+    h2, svg {
+        color: $primary;
+    }
+
+    svg {
+        font-size: 100px;
+
+    }
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
